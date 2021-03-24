@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment"
+    android:background="@color/colorBackground">
+
+    <EditText
+    android:id="@+id/countryNameEditText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    ></EditText>
+
+    <EditText
+        android:id="@+id/summaryEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="summary"
+        android:layout_below="@id/countryNameEditText"
+        ></EditText>
+
+    <EditText
+        android:id="@+id/paperEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="300dp"
+        android:hint="paper"
+        android:layout_below="@id/summaryEditText"
+        ></EditText>
+
+    <Button
+    android:id="@+id/addFlag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="добавить фото"
+    android:layout_below="@id/paperEditText"
+    ></Button>
+
+    <ToggleButton
+        android:id="@+id/openButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Открыта"
+        android:textOff="Закрыта"
+        android:layout_below="@id/addFlag"
+        ></ToggleButton>
+
+    <Button
+        android:id="@+id/addCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="добавить страну в базу данных"
+        android:layout_below="@id/openButton"
+        ></Button>
+
+    <Button
+        android:id="@+id/addArticle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="добавить новость в базу данных"
+        android:layout_below="@id/addCountry"
+        ></Button>
+
+
+</RelativeLayout>

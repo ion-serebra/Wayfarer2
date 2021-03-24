@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:background="@color/colorBackground">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/homeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/solid_half_corners_rect"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userAvatarImage"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/person_light"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            ></com.google.android.material.imageview.ShapeableImageView>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_below="@id/homeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/postsNestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="46dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/userNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Привет!"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Куда хотите поехать в этот раз?"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    ></TextView>
+
+
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Открыто сейчас"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        ></TextView>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Смотреть все >"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="8dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        ></TextView>
+
+                </RelativeLayout>
+
+
+                    <SearchView
+                        android:gravity="center_vertical"
+                        android:id="@+id/searchView"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:maxHeight="56dp"
+                        android:singleLine="true"
+                        android:hint="Поиск"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="5"
+                        android:background="@drawable/light_grey_rect"
+                        ></SearchView>
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/countriesRecyclerView"
+                    android:layout_marginTop="8dp"
+                    android:minHeight="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    > </androidx.recyclerview.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@android:color/black"
+                    ></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Интересно"
+                        android:textSize="20sp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="8dp"
+                        ></TextView>
+
+                </RelativeLayout>
+
+                <com.oshaev.wayfarer2.ui.SquareCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="@dimen/corner_radius"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <com.oshaev.wayfarer2.ui.SquareImageView
+                            android:id="@+id/interestingImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/adventure_img"></com.oshaev.wayfarer2.ui.SquareImageView>
+
+                        <TextView
+                            android:id="@+id/titleArticleTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/interestingTitleTextStyle"
+                            android:text="@string/interesting_title"
+                            android:textStyle="bold"
+                            android:layout_marginTop="280dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            ></TextView>
+
+                        <TextView
+                            android:id="@+id/articleSummaryTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/interestingSummaryTextStyle"
+                            android:text="Как сделать путешествие более комфортным?"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_below="@id/titleArticleTextView"
+                            ></TextView>
+
+                    </RelativeLayout>
+
+                </com.oshaev.wayfarer2.ui.SquareCardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@android:color/black"
+                    ></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Последние новости"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="8dp"
+                        ></TextView>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Смотреть все >"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="8dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        ></TextView>
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/articlesRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    > </androidx.recyclerview.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:color/black"
+                    ></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Все страны"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_margin="8dp"
+                    ></TextView>
+
+                <SearchView
+                    android:gravity="center_vertical"
+                    android:id="@+id/allCountriesSearchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:maxHeight="56dp"
+                    android:singleLine="true"
+                    android:hint="Поиск"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/light_grey_rect"
+                    ></SearchView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/allCountriesRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:minHeight="220dp"
+                    > </androidx.recyclerview.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

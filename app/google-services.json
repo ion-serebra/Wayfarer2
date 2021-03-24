@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "892276860223",
+    "project_id": "wayfarer-social-network",
+    "storage_bucket": "wayfarer-social-network.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892276860223:android:e002246e43efb4d6a61f8a",
+        "android_client_info": {
+          "package_name": "com.oshaev.wayfarer2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892276860223-05tv8rs0phi2hvsdlop4kie9g390ef36.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oshaev.wayfarer2",
+            "certificate_hash": "920564e60867cff8fc8ae87c3910ac6c2fd002c6"
+          }
+        },
+        {
+          "client_id": "892276860223-394bmpo58k4sssu1eo0lqt8rifchoikf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnMrTaKi04q9QBfLwfnrRJ1tQWaUrp-G0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892276860223-394bmpo58k4sssu1eo0lqt8rifchoikf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

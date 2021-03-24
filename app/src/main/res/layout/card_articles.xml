@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="@dimen/corner_radius">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        >
+
+        <com.oshaev.wayfarer2.ui.SquareImageView
+            android:id="@+id/articleImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/israel"
+            ></com.oshaev.wayfarer2.ui.SquareImageView>
+
+        <TextView
+            android:id="@+id/articleTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_above="@id/articleSummaryTextView"
+            style="@style/articleTitleTextStyle"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/articleSummaryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summary"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            style="@style/articleSummaryTextStyle"
+            android:layout_alignParentBottom="true"
+            ></TextView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
